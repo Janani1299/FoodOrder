@@ -1,24 +1,32 @@
+import React,{useState} from 'react';
 import logo from './logo.svg';
+import Header from './Components/Layout/Header';
+import Login from './Components/Login/Login';
+import { Routes, Route} from 'react-router-dom';
+import Seat from './Components/Login/Seat';
+import Cart from './Components/Cart/Cart';
 import './App.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Meals from './Components/Meals/Meals';
+import CartProvider from './store/CartProvider';
+
+
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+
+    <Routes>
+      <Route path = '/' element={<Login/>}></Route>
+      <Route path='/seat' element={<Seat/>}> </Route>
+      {/* <Route path='/cart' element= {cartIsShown && <Cart/> } ></Route> */}
+      <Route path = '/header' element={<Header />}></Route>
+      {/* <Route path='/meals' element={<Meals />}></Route> */}
+      
+     </Routes>
+     </CartProvider>
+   
   );
 }
 

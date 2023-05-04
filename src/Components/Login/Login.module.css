@@ -1,0 +1,128 @@
+.heading{
+    text-align: center;
+    position: fixed;
+    top: 20vh;
+    right: 10%;
+    width: 100%;
+    height: 5rem;
+    /* display: flex; */
+    justify-content: space-between;
+    color: black;
+    /* background: #8a2b06; */
+    padding: 0 1rem;
+    font-size:xx-large;
+}
+
+.content{
+    position: fixed;
+    top:46vh;
+    left:15%;
+    margin-top: 20px;
+    /* font-weight: bold; */
+    font-size: 33px;
+    font-style: oblique;
+    /* padding: 0 15px; */
+    width: 60%;
+    
+}
+
+.quotes {
+    width : 60%;
+    margin-top: 8%;
+    /* color: white; */
+    
+    /* background-color: blue; */
+}
+
+.text::after {
+    content: "\a";
+    white-space: pre;
+
+}
+
+.button {
+    font : inherit;
+    border:1px solid #8a2b06;
+    background: #8a2b06;
+    color:white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    margin-left: 2%;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+    margin-top: 5%;
+
+}
+
+.button:hover,
+.button:active {
+    background: #8a2b06;
+    border-color: #8a2b06;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+}
+
+.button:focus {
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .bg {
+        min-width:'500px';
+        min-height:'593px';
+        background-size:'cover';
+        background-repeat:'no-repeat';
+        overflow:'hidden';
+        object-fit:'cover';
+        position:'relative';
+    }
+    .heading{
+        top: 8vh;
+       margin: 0 -50px 0 4px;
+        justify-content: space-between;
+        font-size:22px;
+        font-weight: bolder;
+        
+    }
+    .content{
+       
+        top:24vh;
+        left:11%;
+        margin-top: 20px;
+       font-size:24 px;
+       width: 100%;
+        
+    }
+    .text {
+        font-size: 24px ;
+        margin-top: 20px;
+    }
+
+    .button{
+        width: auto;
+        margin-left: -30px;
+    }
+
+}
+@media (min-width: 800px) {
+
+    .bg{
+        min-height: auto;
+        min-width: auto;
+    }
+    .heading {
+        font-size: 25px;
+        top: 8vh;
+       margin: 0 -99px 0 4px;
+    }
+    .content {
+        top: 22vh;
+        font-size: 40px;
+        width:110% ;
+    }
+}
+
+
+
+
+
